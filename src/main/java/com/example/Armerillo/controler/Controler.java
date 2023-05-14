@@ -31,7 +31,7 @@ public class Controler {
         model.addAttribute("personas", personas);
         return "index";
     }
-    @GetMapping("/incio")
+    @GetMapping("/inicio")
     public String agregar(Model model){
         return "major";
     }

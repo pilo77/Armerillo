@@ -59,22 +59,22 @@
                     </div>
                     <div class="form-group">
                         <label >TIPO DE ARMA:</label>
-                        <select th:field="*{tipo}" class="form-select" ide="num_abi"onchange="this.remove(this.selectedIndex);" required>
+                        <select th:field="*{tipo}" class="form-select" id="tipo" required>
                             <option value="" disabled selected hidden>-- SELECCIONAR --</option>
                             <option value="ARCO CLASICO">ARCO CLASICO- $6000.000</option>
                             <option value="ARCO CURBO">ARCO CURBO- $6000.000</option>
                             <option value="ARCO LARGO">ARCO LARGO- $2000.000</option>
-                            <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
+
                         </select>
                     </div>
                     <div class="form-group">
                         <label >METDO DE PAGO:</label>
-                        <select th:field="*{metodo}" class="form-select" ide="num_abi"onchange="this.remove(this.selectedIndex);"required >
+                        <select th:field="*{metodo}" class="form-select" ide="metodo"required >
                             <option value="" disabled selected hidden>-- FORMA DE PAGO --</option>
                             <option value="TARGETA CREDITO">TARGETA CREDITO</option>
                             <option value="TARGETA DEBITO">TARGETA DEBITO</option>
                             <option value="EFECTIVO">EFECTIVO</option>
-                            <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
+
                         </select>
                     </div>
                     <div class="form-group">
@@ -85,15 +85,13 @@
 
             <div class="card-footer">
                 <input type="submit" value="Guardar" class="btn btn-success">
-                    <a th:href="@{/listar/}" class="btn btn-warning">Atras</a>
+                    <a th:href="@{/inicio/}" class="btn btn-warning">Atras</a>
                 </div>
 
         </form>
 
     </main>
 
-<table>
 
-</table>
 </body>
 </html>
