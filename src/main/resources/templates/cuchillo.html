@@ -33,25 +33,24 @@
 
 </style>
 <body>
-<heade class="card-header">
-    <center><h3>
-        ARCOS
-    </h3></center>
-</heade>
 <main>
 
     <form th:action="@{/save}" th:object="${persona}" method="POST">
 
-
+        <div class="card-header">
+            <h3>
+                CUCHILLOS
+            </h3>
+        </div>
         <div class="form-group">
             <label>ID</label>
             <input th:field="*{id}" type="text" class="form-control" required>
         </div>
-        <div class="form-group">
+        <div class="form-group">---
             <label>NOMBRE</label>
             <input th:field="*{name}" type="text" class="form-control" required>
         </div>
-        <div class="form-group">
+        <div class="form-group">---
             <label>APELLIDO</label>
             <input th:field="*{apellido}" type="text" class="form-control" required>
         </div>
@@ -63,15 +62,17 @@
             <label>TIPO DE ARMA:</label>
             <select th:field="*{tipo}" class="form-select" id="tipo" required>
                 <option value="" disabled selected hidden>-- SELECCIONAR --</option>
-                <option value="ARCO CLASICO">ARCO CLASICO- $6000.000</option>
-                <option value="ARCO CURBO">ARCO CURBO- $6000.000</option>
-                <option value="ARCO LARGO">ARCO LARGO- $2000.000</option>
+                <option value="Cuchillo mondador">Cuchillo mondador - $700.000</option>
+                <option value="Cuchillo cebollero">Cuchillo cebollero- $600.000</option>
+                <option value="Cuchillo deshuesador">Cuchillo deshuesador - $400.000</option>
+                <option value="Cuchillo fileteador">Cuchillo fileteador - $200.000</option>
+                <option value="Cuchillo jamonero">Cuchillo jamonero- $150.000</option>
 
             </select>
         </div>
         <div class="form-group">
             <label>METDO DE PAGO:</label>
-            <select th:field="*{metodo}" class="form-select" ide="metodo" required>
+            <select th:field="*{metodo}" class="form-select" id="metodo" required>
                 <option value="" disabled selected hidden>-- FORMA DE PAGO --</option>
                 <option value="TARGETA CREDITO">TARGETA CREDITO</option>
                 <option value="TARGETA DEBITO">TARGETA DEBITO</option>
@@ -89,8 +90,10 @@
             <input type="submit" value="Guardar" class="btn btn-success">
             <a th:href="@{/inicio}" class="btn btn-warning">Atras</a>
         </div>
+        </div>
 
     </form>
+
 
 </main>
 

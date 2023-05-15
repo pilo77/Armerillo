@@ -24,6 +24,10 @@ public class Controler {
     @Autowired
     private IPersonaService service;
 
+    @GetMapping("/inicio")
+    public String agregar(Model model){
+        return "major";
+    }
 
     @GetMapping("/listar")
     public String listar(Model model){
@@ -31,10 +35,7 @@ public class Controler {
         model.addAttribute("personas", personas);
         return "index";
     }
-    @GetMapping("/inicio")
-    public String agregar(Model model){
-        return "major";
-    }
+
 
     @GetMapping("/arco")
     public String agregar1(Model model){
@@ -49,7 +50,7 @@ public class Controler {
     @GetMapping("/cuchillo")
     public String agregar3(Model model){
         model.addAttribute("persona", new Persona());
-        return "Cuchillo";
+        return "cuchillo";
     }
     @GetMapping("/escopeta")
     public String agregar4(Model model){
@@ -80,7 +81,7 @@ public class Controler {
     @PostMapping("/save")
     public String save(@Validated Persona p){
         service.save(p);
-        return "redirect:/incio";
+        return "redirect:/inicio";
     }
 
     @GetMapping("/editar/{id}")
