@@ -1,9 +1,8 @@
 package com.example.Armerillo.controler;
 
-
-
 import com.example.Armerillo.interfaceService.IPersonaService;
 import com.example.Armerillo.modelo.Persona;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -78,9 +77,9 @@ public class Controler {
         return "editador";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/saveC")
     public String save(@Validated Persona p){
-        service.save(p);
+        service.saveC(p);
         return "redirect:/inicio";
     }
 

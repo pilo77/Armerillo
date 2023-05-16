@@ -31,8 +31,8 @@
     }
 </style>
 <body>
-    <main ><center>
-        <form th:action="@{/save}" th:object="${persona}" method="POST">
+    <main >
+        <form th:action="@{/saveC}" th:object="${persona}" method="POST">
                 <div class="card-header">
                     <h3>
                        PISTOLAS
@@ -89,6 +89,5 @@
                     <a th:href="@{/inicio}" class="btn btn-warning">Atras</a>
                 </div>
         </form>
-    </main></center>
-</body>
+    </main>
 </html>
